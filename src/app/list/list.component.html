@@ -1,0 +1,25 @@
+
+
+    <router-outlet></router-outlet>
+ 
+<div class="container">
+    <h1 class="list_title">{{pagetitle}}</h1>    
+</div>
+
+<div class="todolist_wrapper">
+<div class="todolist_container" *ngFor="let todolist of todolists | status:filterStatus:'status'; let i=index">
+    <form>
+       <input type="checkbox" (click)="onStatus(i,$event)" [checked]="todolist.status=='completed'">
+        <div [className]="todolist.status=='completed'?'selected':''">{{todolist.title}}</div>
+        <div [className]="todolist.status=='completed'?'selected':''">{{todolist.description | contentlimit:20}}</div>
+        <div class="button_container">
+            <a (click)="onEdit(i)" class="btn_edit"><fa-icon [icon]="faPen"></fa-icon></a>
+            <a (click)="onDelete(i)" class="btn_delete"><fa-icon [icon]="faTrash"></fa-icon></a>
+            
+        </div>
+    </form>
+</div>
+</div>
+
+
+

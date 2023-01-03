@@ -1,1 +1,190 @@
 /* You can add global styles to this file, and also import other style files */
+
+.container, header, .listform{
+    max-width: 900px;
+    margin: auto;
+    padding: 10px;
+}
+
+.todolist_wrapper{
+    min-height: 50vh;
+    max-width: 900px;
+    margin: auto;
+    border-bottom: 1px solid #F0CA47;
+}
+
+.list_title{
+    border-bottom: 2px solid #333;
+}
+
+.footer_menu{
+    ul{
+        list-style: none;
+        display: flex;
+        padding: 0;
+        li{
+            padding: 5px 10px;
+        }
+
+        a{
+            background: #F0CA47;
+            color: #fff;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 10px;
+          
+            &:hover, &:active{
+                background: #c09d1f;
+            }
+        }
+
+        a.active{
+            background: #c09d1f;
+        }
+        
+    
+    }
+}
+
+.listform{
+    margin-bottom: 10px;
+    border-bottom: 5px solid red;
+}
+.fields{
+    display: flex;
+    margin-bottom: 10px;
+
+    input[type="text"]{
+        width: 100%;
+        height: 30px;
+    }
+    textarea{
+        width: 100%;
+        height: 150px;
+    }
+
+    label{
+        min-width: 100px;    
+        padding: 10px;
+    }
+
+    input[type="button"]{
+        padding: 10px 20px;
+        margin:10px;
+    }
+}
+
+.fields.btn_container{
+    justify-content: flex-end;
+}
+
+
+
+
+nav{
+    padding: 0;
+    margin: 0;
+    ul{
+        list-style: none;
+        display: flex;
+        padding: 0;
+        margin: 0;
+        li{
+            padding:10px;
+
+            a{
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+}
+
+.todolist_container form{
+    display: grid;
+    padding: 10px;
+    grid-gap: 10px;
+    grid-template-columns: .2fr 1fr 2fr 1fr;
+    max-width: 900px;
+    margin: auto;
+    align-items: center;
+    &:nth-child(even){
+        background: #f3f3f3;
+    }
+
+    input[type="checkbox"]{
+            appearance: none;
+            background-color: transparent;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            border: 2px solid #F0CA47;
+    }
+
+    .button_container {
+        display: flex;
+        justify-content: flex-end;
+
+        a{
+        padding:10px;
+        margin:5px;
+        border:1px solid #fefefe;
+        cursor: pointer;
+        }
+    }
+}
+
+a.btn_edit:hover{
+    filter: brightness(1.2);
+}
+
+a.btn_delete:hover{
+background-color: rgb(169, 10, 10);
+color: #fff;
+}
+
+
+.todolist_container .selected, .todolist_container .ischecked
+{
+    opacity: .8;
+    text-decoration: line-through;
+    color: #a5a4a4;
+    transition: .2s ease-in-out;
+}
+
+
+
+
+.todolist_container input[type=checkbox]:checked {
+    background: #F0CA47;
+    color: #F0CA47;
+    display: block;
+    text-align: center;
+}
+
+
+
+.btn_delete, .btn_cancel{
+    background-color: red;
+    color: #fff;
+}
+
+.btn_edit, .btn_submit{
+    background-color: green;
+    color: #fff;
+}
+
+
+
+.user_container{
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: auto;
+}
+
+
+input[type=button], button{
+    cursor: pointer;
+}

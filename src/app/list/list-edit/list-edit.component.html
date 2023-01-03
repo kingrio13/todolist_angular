@@ -1,0 +1,21 @@
+
+<form [formGroup]="listForm" (ngSubmit)="onSubmit()" class="listform">
+<div class="fields">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" formControlName="ltitle">
+</div>
+
+<div class="fields">
+    <label for="description">Description:</label>
+    <textarea name="description" id="description" formControlName="ldesc">
+    </textarea>
+</div>
+
+
+
+
+<div class="fields btn_container">
+    <input type="button" value="Submit" (click)="onSubmit()" class="btn_submit">
+    <input type="button" value="Cancel" (click)="onCancel()" class="btn_cancel">
+</div>
+</form>
