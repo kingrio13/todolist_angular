@@ -8,6 +8,7 @@ import { ErrorMessageComponent } from './error-message/error-message.component';
 const appRoutes:Routes=[
  {path:'', redirectTo:'/todo', pathMatch:'full'},
   {path:'create', component:ListEditComponent},
+  {path:'todolist_angular', component:ListComponent},
    {path: 'todo', component: ListComponent,
     children: [
       {path: ':id', component: ListEditComponent,},
